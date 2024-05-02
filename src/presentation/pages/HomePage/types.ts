@@ -23,3 +23,7 @@ export interface ProfileData {
   parentsVerified: boolean;
   litterVerified: boolean;
 }
+
+export interface ContainerProps {
+  children: React.ReactNode;
+}

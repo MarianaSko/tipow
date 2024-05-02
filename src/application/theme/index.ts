@@ -1,5 +1,6 @@
 export const theme = {
   font: {
+    main: "'Open Sans'",
     default: "'Open Sans', 'Helvetica', sans-serif",
     alternate: "'Source Serif 4', serif",
   },

@@ -3,6 +3,11 @@ import { HomePageProps } from "./types";
 import * as Styled from "./styled";
 import { FaCheck } from "react-icons/fa";
 import { useTheme } from "@emotion/react";
+import Header from "./Header/Header";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
+import Container from "./Container/Container";
+import Announcements from "./Announcements/Announcements";
+
 
 export * from "./types";
 
@@ -17,14 +22,12 @@ export const HomePage: FC<HomePageProps> = (props) => {
 
   return (
     <Styled.PageWrapper>
-      <Styled.HeaderContainer>
-        My Tipaw
-        <div>Fr - Nl</div>
-        <img src={profile.avatar} width="50px" alt="some guy with a dog" />
-        {profile.name}
-      </Styled.HeaderContainer>
-      Profile Completed {profile.globalProgress}% Verification
-      <Styled.ProgressContainer>
+      <Header profile={profile}></Header>
+     <Container>
+       <ProfileInfo profile={profile}></ProfileInfo>
+     </Container>
+      {/* Profile Completed {profile.globalProgress}% Verification */}
+      {/* <Styled.ProgressContainer>
         <Styled.ProgressItem>
           Verification : <FaCheck color={theme.color.green.default} />
         </Styled.ProgressItem>
@@ -40,16 +43,19 @@ export const HomePage: FC<HomePageProps> = (props) => {
         <Styled.ProgressItem>
           <FaCheck color={theme.color.green.default} />
         </Styled.ProgressItem>
-      </Styled.ProgressContainer>
+      </Styled.ProgressContainer> */}
       <Styled.AnnouncementsContainer>
-        Announcements from TIPAW
+          <Container>
+        <Announcements announcements = {announcements}></Announcements>
+        </Container>
+        {/* Announcements from TIPAW
         {announcements.map((announcement, index) => (
           <Styled.AnnouncementsContainer key={announcement.id}>
             <div>{announcement.title}</div>
             <div>{announcement.content}</div>
             <div>{announcement.date}</div>
           </Styled.AnnouncementsContainer>
-        ))}
+        ))} */}
       </Styled.AnnouncementsContainer>
     </Styled.PageWrapper>
   );
