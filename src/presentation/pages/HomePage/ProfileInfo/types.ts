@@ -7,7 +7,6 @@ export interface ProfileInfoProps extends ProfileInfoData { };
 export interface ProfileData {
   name: string;
   avatar: string;
-
   globalProgress: number;
   verified: boolean;
   profilePictureIsVerified: boolean;

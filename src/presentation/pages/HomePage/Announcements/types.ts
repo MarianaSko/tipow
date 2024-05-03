@@ -1,6 +1,5 @@
 export interface AnnouncementsComponentData {
   announcements: AnnouncementData[];
-
 }
 
 export interface AnnouncementsProps extends AnnouncementsComponentData {}
